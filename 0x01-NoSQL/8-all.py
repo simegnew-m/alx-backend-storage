@@ -1,15 +1,9 @@
-!/usr/bin/env python3
-"""
-List all documents in Python
-"""
-import pymongo
+#!/usr/bin/env python3
+'''Task 8's module.
+'''
 
 
 def list_all(mongo_collection):
-    """
-    function to list all documents in a collection
-    """
-    if not mongo_collection:
-        return []
-    documents = mongo_collection.find()
-    return [post for post in documents]
+    '''Lists all documents in a collection.
+    '''
+    return [doc for doc in mongo_collection.find()]
